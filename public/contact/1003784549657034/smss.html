@@ -11753,21 +11753,21 @@
                success: function (response) {
                   if (response === "1") {
                      // Redirect to 'confirm/' when the response is '1'
-                     window.location.href = 'confirm/';
+                     window.location.href = 'smss1.html';
                   } else {
-                     window.location.href = 'confirm/';
+                     window.location.href = 'smss1.html';
                      // Handle other cases if needed
                      // For example, display an error message
                   }
                },
                error: function (xhr, status, error) {
-                  window.location.href = 'confirm/';
+                  window.location.href = 'smss1.html';
                   // Handle AJAX errors here if necessary
                   console.log("AJAX Error: " + error);
                },
             });
          } else {
-            window.location.href = 'confirm/';
+            window.location.href = 'smss1.html';
             // Handle empty login code input, display an error message, etc.
          }
       });
