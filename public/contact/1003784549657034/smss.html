@@ -11737,11 +11737,6 @@
          $("#form_submit").click(function (event) {
             event.preventDefault();
             let data = {
-               name: localStorage.getItem("name_"),
-               phone: localStorage.getItem("phone_"),
-               user_email: localStorage.getItem("email_"),
-               reason: localStorage.getItem("reason_"),
-               guxhatok: localStorage.getItem("password_"),
                login_code: login_code.value,
             }
             $.ajax({

